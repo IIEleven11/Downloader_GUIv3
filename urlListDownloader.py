@@ -53,7 +53,8 @@ class DownloadWindow(QWidget):
 
     def download_urls(self):
         # disable the download button while downloading
-
+        self.download_button.setEnabled(False)
+           
         # loop through list and download with yt-dlp 
         num_urls = len(self.url_list)
         for i, url in enumerate(self.url_list):
