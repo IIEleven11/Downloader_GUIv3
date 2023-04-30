@@ -57,7 +57,7 @@ class DownloadWindow(QWidget):
         # loop through list and download with yt-dlp 
         num_urls = len(self.url_list)
         for i, url in enumerate(self.url_list):
-            args = ['yt-dlp.exe', '--legacy-server-connect', '-a', url]         # possible issue here with --legacy-server-connect and -a parameters
+            args = ['yt-dlp.exe', '--legacy-server-connect', url]         # possible issue here with --legacy-server-connect and -a parameters
             subprocess.call(args)
 
             # progress bar
