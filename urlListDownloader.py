@@ -44,7 +44,7 @@ class DownloadWindow(QWidget):
 
     def load_urls(self):
         # prompting user to select file for their list
-        file_name, _ = QFileDialog.getOpenFileName(self, 'Open File', '', 'Text Files (*.txt)')
+        file_name, _ = QFileDialog.getOpenFileName(self, 'Open File', 'Text Files (*.txt)')
 
         # read Urls from list
         with open(file_name, 'r') as f:
@@ -58,7 +58,7 @@ class DownloadWindow(QWidget):
         # loop through list and download with yt-dlp 
         num_urls = len(self.url_list)
         for i, url in enumerate(self.url_list):
-            args = ['yt-dlp.exe', '--legacy-server-connect', url]         # possible issue here with --legacy-server-connect and -a parameters
+            args = ['yt-dlp.exe', '--legacy-server-connect', '--merge-output-format', 'mp4', url]         # added "--merge-output-format mp4" argument
             subprocess.call(args)
 
             # progress bar
