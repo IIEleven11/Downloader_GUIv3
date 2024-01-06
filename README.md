@@ -2,7 +2,9 @@
 **__Download/Install__**
 -----------------------------------------------------------------------------------------------------------------------
 
-Download exe from the releases page. 
+Download zipped file from the releases page. 
+
+Unzip it all to the same folder
 
 Double click it to open and you'll get a simple GUI. 
 
@@ -21,10 +23,6 @@ Push download to begin the process.
 -----------------------------------------------------------------------------------------------------------------------
 
 Downloads will be placed in the same folder as urllistdownloader.exe
-
-You will need to have yt-dlp.exe in the same folder or have it's path added to your environment variables. You can get it here - https://github.com/yt-dlp/yt-dlp
-
-
 
 Sample folder structure could look something like this (list.txt or whatever txt file youre making the list out of doesnt need to be located here or named "list")
 
